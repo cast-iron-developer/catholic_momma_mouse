@@ -1,6 +1,6 @@
 {
-  "name": "catholic-momma-mouse",
-  "private": true,
+  "name": "catholic-momma-mouse-server",
+  "private": false,
   "version": "1.0.0",
   "main": "package.json",
   "license": "UNLICENSED",
