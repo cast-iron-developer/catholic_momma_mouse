@@ -10,6 +10,9 @@ export default {
 	plugins: [require('flowbite/plugin')],
 	darkMode: 'class',
 	theme: {
+		fontFamily: {
+			montserrat: ['Montserrat', 'sans-serif']
+		},
 		extend: {
 			colors: {
 				// flowbite-svelte

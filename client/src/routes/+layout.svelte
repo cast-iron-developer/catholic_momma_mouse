@@ -14,7 +14,7 @@
 	/>
 </svelte:head>
 
-<div>
+<div class="font-montserrat">
 	<header>
 		<Navigation navItems={data.navigationItems}></Navigation>
 	</header>
