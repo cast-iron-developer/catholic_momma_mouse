@@ -10,6 +10,3 @@ cd "$sanity_dir" || exit
 # Start the Sanity.io project
 echo "Starting Catholic Momma Mouse Sanity Studio CMS."
 npm run dev
-
-echo "Returning to Root."
-cd ../ || exit

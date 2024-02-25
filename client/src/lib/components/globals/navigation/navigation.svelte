@@ -16,7 +16,7 @@
 	export let navItems;
 </script>
 
-<Navbar let:hidden let:toggle class="bg-tertiary">
+<Navbar let:hidden let:toggle class="bg-transparent">
 	<NavBrand href="/">
 		<img src={logo} class="me-3 w-40" alt="Catholic Momma Mouse" />
 		<span class="hidden self-center whitespace-nowrap text-xl font-semibold dark:text-white"

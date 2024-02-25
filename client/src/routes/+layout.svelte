@@ -18,8 +18,15 @@
 	<header>
 		<Navigation navItems={data.navigationItems}></Navigation>
 	</header>
-	<main class="container mx-auto">
+	<main>
 		<slot />
 	</main>
 	<Footer navItems={data.navigationItems}></Footer>
 </div>
+
+<style>
+	header {
+		position: relative;
+		z-index: 10;
+	}
+</style>
