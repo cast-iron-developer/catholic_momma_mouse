@@ -1,6 +1,8 @@
 <script>
 	import lg_bg_image from '$lib/images/background-images/wdw-castle-fireworks.png';
+	let width = 0;
 </script>
+<svelte:window bind:innerWidth={width} />
 
 <article class="article bg-cover bg-center" style="background-image: url({lg_bg_image})">
 	<section class="contianer-md mx-auto px-4 py-20">
@@ -17,16 +19,16 @@
 				</div>
 				<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
 					<div class="text-center">
-						<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-							Where Faith Meets Fantasy
+						<h1 class="text-4xl font-bold tracking-tight text-secondary sm:text-6xl">
+							Where Faith Meets Fantasy {width}
 						</h1>
-						<p class="mt-6 text-lg leading-8 text-gray-600">
+						<p class="mt-6 text-lg leading-8 text-secondary">
 							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt aliquam id
 							voluptatibus consequuntur fugiat, autem minima architecto libero, iure distinctio quia
 							nihil repudiandae, a pariatur harum. Rerum quisquam repudiandae cum!
 						</p>
 						<div class="mt-10 flex items-center justify-center gap-x-6">
-							<a href="/" class="text-sm font-semibold leading-6 text-gray-900"
+							<a href="/" class="text-sm font-semibold leading-6 text-secondary-300"
 								>See Reviews <span aria-hidden="true">→</span></a
 							>
 						</div>
