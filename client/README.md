@@ -6,6 +6,7 @@
 - TailwindCSS
 - Sveltekit
 - [Flowbite](https://flowbite.com/docs/getting-started/svelte/)
+    - Further Flowbite Documentation on: [github](https://github.com/themesberg/flowbite-svelte)
 
 ## Running the Application:
 
@@ -32,4 +33,5 @@
 
 ## Deployment Environment
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target
+> environment.

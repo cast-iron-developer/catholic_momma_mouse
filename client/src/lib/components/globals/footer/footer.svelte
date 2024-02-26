@@ -15,7 +15,7 @@
 <Footer color="prussian_blue" footerType="socialmedia">
 	<div class="md:flex md:justify-between">
 		<div class="mb-6 md:mb-0">
-			<FooterBrand imgClass="w-52" href="/" src={logo} alt="Faith Meets Fantasy" />
+			<FooterBrand imgClass="w-52 ml-14 my-5" href="/" src={logo} alt="Faith Meets Fantasy" />
 		</div>
 		<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
 			<div>
@@ -28,13 +28,6 @@
 					{/each}
 				</FooterLinkGroup>
 			</div>
-			<!-- <div>
-				<h2 class="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">Reviews</h2>
-				<FooterLinkGroup>
-					<FooterLink liClass="mb-4" href="/">GitHub</FooterLink>
-					<FooterLink liClass="mb-4" href="/">Discord</FooterLink>
-				</FooterLinkGroup>
-			</div> -->
 			<div>
 				<h2 class="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">Legal</h2>
 				<FooterLinkGroup>

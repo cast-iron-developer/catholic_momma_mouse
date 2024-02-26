@@ -4,17 +4,16 @@ export default {
 		'./src/**/*.{html,js,svelte,ts}',
 		'./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
 	],
-	theme: {
-		extend: {}
-	},
 	plugins: [require('flowbite/plugin')],
 	darkMode: 'class',
 	theme: {
+		fontFamily: {
+			montserrat: ['Montserrat', 'sans-serif']
+		},
 		extend: {
 			colors: {
-				// flowbite-svelte
 				primary: {
-					50: '#00233c',
+					DEFAULT: '#00233c',
 					100: '#00070c',
 					200: '#000e18',
 					300: '#001525',
@@ -26,7 +25,7 @@ export default {
 					900: '#a5daff'
 				},
 				secondary: {
-					50: '#48beff',
+					DEFAULT: '#48beff',
 					100: '#002a41',
 					200: '#005583',
 					300: '#007fc4',
@@ -72,6 +71,12 @@ export default {
 					700: '#7db7af',
 					800: '#a8cfc9',
 					900: '#d4e7e4'
+				},
+				white: {
+					DEFAULT: '#eee'
+				},
+				black: {
+					DEFAULT: '#333'
 				}
 			}
 		}
