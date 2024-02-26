@@ -21,10 +21,12 @@
             Dropdown
             <ChevronDownOutline class="w-3 h-3 ms-2 text-myrtle_green-600 md:hover:text-myrtle_green-800 inline"/>
         </NavLi>
-        <Dropdown classInner="bg-transparent" class="w-44 z-20 text-myrtle_green-600">
-            <DropdownItem class="md:hover:text-myrtle_green-800" href="/">Dashboard</DropdownItem>
-            <DropdownItem class="md:hover:text-myrtle_green-800" href="/docs/components/navbar">Settings</DropdownItem>
-            <DropdownItem class="md:hover:text-myrtle_green-800" href="/">Earnings</DropdownItem>
+        <Dropdown containerClass="bg-transparent " class="w-44 z-20 text-myrtle_green-600">
+            <DropdownItem class="md:hover:text-myrtle_green-800 hover:bg-transparent" href="/">Dashboard</DropdownItem>
+            <DropdownItem class="md:hover:text-myrtle_green-800 hover:bg-transparent" href="/docs/components/navbar">
+                Settings
+            </DropdownItem>
+            <DropdownItem class="md:hover:text-myrtle_green-800 hover:bg-transparent" href="/">Earnings</DropdownItem>
         </Dropdown>
         {#each navItems as {title, href}}
             <NavLi class="text-myrtle_green-600 md:hover:text-myrtle_green-800" {href}>{title}</NavLi>
