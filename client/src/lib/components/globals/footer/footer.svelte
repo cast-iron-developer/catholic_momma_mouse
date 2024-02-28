@@ -1,5 +1,5 @@
 <script>
-	import logo from '$lib/images/logo/logo.svg';
+	import logo from '$lib/images/logo/black_logo.svg';
 	import {
 		Footer,
 		FooterBrand,
@@ -9,6 +9,7 @@
 		FooterLinkGroup
 	} from 'flowbite-svelte';
 	import { FacebookSolid, TwitterSolid } from 'flowbite-svelte-icons';
+
 	export let navItems;
 </script>
 

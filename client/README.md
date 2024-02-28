@@ -7,6 +7,7 @@
 - Sveltekit
 - [Flowbite](https://flowbite.com/docs/getting-started/svelte/)
     - Further Flowbite Documentation on: [github](https://github.com/themesberg/flowbite-svelte)
+- Image Compression done with: [Squoosh](https://squoosh.app)
 
 ## Running the Application:
 
