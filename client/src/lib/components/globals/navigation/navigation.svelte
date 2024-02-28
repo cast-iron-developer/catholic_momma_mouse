@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/logo/alt_logo.svg';
+	import logo from '$lib/images/logo/secondary_logo.svg';
 	import {
 		Dropdown,
 		DropdownItem,
@@ -18,7 +18,7 @@
 
 <Navbar let:hidden let:toggle class="bg-transparent">
 	<NavBrand href="/">
-		<img src={logo} class="me-3 w-40 bg-secondary-600 logo" alt="Catholic Momma Mouse" />
+		<img src={logo} class="me-3 w-40 logo" alt="Catholic Momma Mouse" />
 		<span class="hidden self-center whitespace-nowrap text-xl font-semibold"
 			>Catholic Momma Mouse</span
 		>

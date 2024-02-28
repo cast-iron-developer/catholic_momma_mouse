@@ -1,6 +1,6 @@
 <script>
-	import bg_image from '$lib/images/background-images/wdw-castle-fireworks.png';
-	import lg_bg_image from '$lib/images/background-images/wdw-castle-fireworks-lg.png';
+	import bg_image from '$lib/images/background-images/wdw-castle-fireworks.webp';
+	import lg_bg_image from '$lib/images/background-images/wdw-castle-fireworks-lg.webp';
 	let width = 0;
 
 	const getBackgroundImage = (width) => {
@@ -15,7 +15,7 @@
 <svelte:window bind:innerWidth={width} />
 
 <article
-	class="article bg-cover bg-center"
+	class="article bg-cover bg-center bg-no-repeat"
 	style="background-image: url({getBackgroundImage(width)})"
 >
 	<section class="contianer-md mx-auto px-4 py-80">
@@ -66,5 +66,6 @@
 	.article {
 		position: relative;
 		top: -72px;
+		margin-bottom: -72px;
 	}
 </style>
