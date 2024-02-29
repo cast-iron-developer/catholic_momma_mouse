@@ -1,7 +1,12 @@
 <script>
 	import bg_image from '$lib/images/background-images/wdw-castle-fireworks.webp';
 	import lg_bg_image from '$lib/images/background-images/wdw-castle-fireworks-lg.webp';
+	import cmm from '$lib/images/siteImages/catholic-momma-mouse.webp';
 	let width = 0;
+
+	export let data;
+
+	console.log(data);
 
 	const getBackgroundImage = (width) => {
 		if (width >= 2000) {
@@ -18,7 +23,7 @@
 	class="article bg-cover bg-center bg-no-repeat"
 	style="background-image: url({getBackgroundImage(width)})"
 >
-	<section class="contianer-md mx-auto px-4 py-80">
+	<section class="container-md mx-auto px-4 py-80">
 		<div class="relative isolate px-6 pt-14 lg:px-8">
 			<div class="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
 				<div class="text-center">
@@ -60,6 +65,34 @@
 			</div>
 		</div>
 	</section>
+</article>
+<article class="bg-primary py-32">
+	<div
+		class="mx-10 max-w-3xl flex-col flex-wrap flex p-3 bg-primary xl:max-w-5xl md:flex-row md:flex-nowrap md:mx-auto"
+	>
+		<section class="basis-1/2 relative xl:mr-1 sm:basis-1/3">
+			<img
+				src={cmm}
+				class="inset-0 object-cover border-white border-2 md:h-full"
+				alt="Catholic Momma Mouse"
+				loading="lazy"
+			/>
+		</section>
+		<section class="basis-1/2 p-6 text-secondary-400 sm:basis-2/3 self-center">
+			<h1 class="mb-2 text-3xl">Catholic Momma Mouse</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem deleniti
+				dignissimos dolores, dolorum eum incidunt ipsa, iure optio pariatur placeat provident quis
+				quod voluptatem voluptatibus! Dignissimos facilis incidunt vero.
+			</p>
+			<br />
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. At commodi est, fuga ipsum magnam
+				mollitia odit quae quam qui repellendus voluptatem voluptatibus! Amet corporis cum iure
+				natus quaerat sed velit!
+			</p>
+		</section>
+	</div>
 </article>
 
 <style>
