@@ -40,7 +40,7 @@
 					</h2>
 					<div class="mt-10 flex items-center justify-center gap-x-6">
 						<a
-							href="/"
+							href="/reviews"
 							class="text-secondary-700 bg-secondary-100 hover:text-secondary-100 border border-secondary-700 hover:bg-secondary-700 focus:ring-4 focus:outline-none focus:ring-secondary-300 font-medium rounded-lg text-lg px-10 py-2.5 text-center me-2 mb-2"
 						>
 							See Reviews
