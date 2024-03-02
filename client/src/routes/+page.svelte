@@ -23,14 +23,14 @@
 	class="article bg-cover bg-center bg-no-repeat"
 	style="background-image: url({getBackgroundImage(width)})"
 >
-	<section class="container-md mx-auto px-4 py-80">
+	<section class="container-md mx-auto px-4 py-10 lg:py-14 xl:py-28 2xl:80">
 		<div class="relative isolate px-6 pt-14 lg:px-8">
-			<div class="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+			<div class="mx-auto max-w-4xl py-14 lg:py-20 xl:py-40 2xl:56">
 				<div class="text-center">
 					<h1
 						class="text-4xl font-bold tracking-tight text-secondary sm:text-6xl text-shadow-white"
 					>
-						Where Faith Meets Fantasy
+						Where Faith Meets Fantasy {width}
 					</h1>
 					<hr class="bg-primary-700 h-2 my-10" />
 					<h2
