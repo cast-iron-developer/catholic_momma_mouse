@@ -23,7 +23,10 @@
 			>Catholic Momma Mouse</span
 		>
 	</NavBrand>
-	<NavHamburger on:click={toggle} />
+	<NavHamburger
+		class="focus:outline-none whitespace-normal m-0.5 rounded-lg focus:ring-2 p-1.5 focus:ring-primary-400 hover:bg-primary-100 dark:hover:bg-primary-600 ms-3 md:hidden"
+		on:click={toggle}
+	/>
 	<NavUl {hidden} {activeUrl}>
 		<NavLi class="cursor-pointer text-secondary-600 md:hover:text-secondary-800">
 			Reviews
