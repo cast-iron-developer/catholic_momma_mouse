@@ -2,7 +2,6 @@
 	import { PortableText } from '@portabletext/svelte';
 
 	export let data;
-	console.log(data.disneyReview[0].body);
 </script>
 
 <article>

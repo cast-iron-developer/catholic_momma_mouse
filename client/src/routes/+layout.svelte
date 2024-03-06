@@ -1,7 +1,7 @@
 <script>
 	import '../app.scss';
 	import Footer from '../lib/components/globals/footer/footer.svelte';
-	import Navigation from '../lib/components/globals/navigation/navigation.svelte';
+	import Navigation from '$lib/components/globals/navigation/navigation.svelte';
 
 	export let data;
 </script>
@@ -15,18 +15,9 @@
 </svelte:head>
 
 <div class="font-montserrat">
-	<header>
-		<Navigation navItems={data.navigationItems}></Navigation>
-	</header>
+	<Navigation navItems={data.navigationItems}></Navigation>
 	<main>
 		<slot />
 	</main>
 	<Footer navItems={data.navigationItems}></Footer>
 </div>
-
-<style>
-	header {
-		position: relative;
-		z-index: 10;
-	}
-</style>

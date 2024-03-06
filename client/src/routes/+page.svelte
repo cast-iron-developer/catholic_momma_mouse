@@ -6,8 +6,6 @@
 
 	export let data;
 
-	console.log(data);
-
 	const getBackgroundImage = (width) => {
 		if (width >= 2000) {
 			return lg_bg_image;
@@ -96,9 +94,10 @@
 </article>
 
 <style>
-	.article {
-		position: relative;
-		top: -72px;
-		margin-bottom: -72px;
-	}
+	/* hiding while I work on revamping the navigation-- */
+	/*.article {*/
+	/*	position: relative;*/
+	/*	top: -72px;*/
+	/*	margin-bottom: -72px;*/
+	/*}*/
 </style>
