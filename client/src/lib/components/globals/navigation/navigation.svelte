@@ -13,7 +13,6 @@
 	export let navItems;
 
 	const onWindowClick = (e) => {
-		console.log(e.target);
 		if (
 			navigation &&
 			navigation.contains(e.target) === false &&
