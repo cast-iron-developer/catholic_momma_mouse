@@ -29,6 +29,7 @@
 						class="text-4xl font-bold tracking-tight text-secondary sm:text-6xl text-shadow-white"
 					>
 						Where Faith Meets Fantasy
+						{width}
 					</h1>
 					<hr class="bg-primary-700 h-2 my-10" />
 					<h2

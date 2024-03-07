@@ -26,11 +26,16 @@
 
 <svelte:window bind:innerWidth={width} on:click={onWindowClick} />
 
-<header class="container mx-auto max-sm:px-16 max-w-screen-lg">
-	<nav class="flex justify-between items-center">
+<header class="bg-primary">
+	<nav class="max-sm:py-2 max-sm:mx-12 md:mx-16 flex justify-between items-center">
 		<div class="block">
 			<a href="/">
-				<img id="headerLogo" class="block h-16" src={logo} alt="Disney Momma Mouse" />
+				<img
+					id="headerLogo"
+					class="block h-14 only-md:h-12 max-sm:h-10"
+					src={logo}
+					alt="Disney Momma Mouse"
+				/>
 			</a>
 		</div>
 		<div class="md:hidden leading-none">
@@ -42,8 +47,9 @@
 						width="2rem"
 						height="2rem"
 						viewBox="0 0 24 24"
-						fill="secondary-200"
-						class="relative"
+						fill="white"
+						class="relative hover:drop-shadow-light"
+						data-open-button="menuOpen"
 						in:fade={{ delay: 275, duration: 30, easing: quintOut, axis: 'x' }}
 						out:fade={{ delay: 275, duration: 30, easing: quintOut, axis: 'x' }}
 					>
@@ -57,8 +63,9 @@
 						width="2rem"
 						height="2rem"
 						viewBox="0 0 56 56"
-						fill="secondary-200"
-						class="absolute z-20 top-0 right-0 mt-3 mr-3"
+						fill="white"
+						class="absolute z-20 top-0 right-0 mt-3 mr-3 hover:drop-shadow-dark"
+						data-close-button="menuClose"
 						in:fade={{ delay: 275, duration: 30, easing: quintOut, axis: 'x' }}
 						out:fade={{ delay: 275, duration: 30, easing: quintOut, axis: 'x' }}
 					>
@@ -79,15 +86,19 @@
 				bind:this={navigation}
 			>
 				<ul
-					class="flex max-sm:flex-col max-sm:px-14 max-sm:items-center max-sm:justify-around max-sm:h-5/6 md:flex-row md:flex-nowrap md:justify-around md:content-center md:align-center"
+					class="flex max-sm:flex-col max-sm:items-center max-sm:justify-around max-sm:h-5/6 max-sm:w-full md:flex-row md:flex-nowrap md:justify-around md:content-center md:align-center"
 				>
 					{#each navItems as { title, href }}
 						<li
 							class={activeUrl === href
-								? 'flex-1 text-center text-2xl bg-primary text-secondary-400'
-								: 'flex-1 text-center text-2xl text-secondary-100'}
+								? 'group active-tab flex-auto text-center max-sm:text-lg max-sm:w-full only-md:text-xl lg:text-2xl'
+								: 'group flex-auto text-center max-sm:text-lg only-md:text-xl lg:text-2xl max-sm:w-full'}
 						>
-							<a on:click={() => (isOpen = !isOpen)} {href}>{title}</a>
+							<a
+								class="hover:bg-secondary-200 md:py-4 max-sm:px-20 max-sm:py-3 block max-sm:text-white md:text-secondary-600 group-[.active-tab]:bg-primary-200"
+								on:click={() => (isOpen = !isOpen)}
+								{href}>{title}</a
+							>
 						</li>
 					{/each}
 				</ul>
