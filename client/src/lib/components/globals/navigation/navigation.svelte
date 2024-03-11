@@ -81,7 +81,7 @@
 		{#if isOpen || width >= '768'}
 			<div
 				id="navigation"
-				class="basis-1/2 max-sm:flex max-sm:items-end max-sm:absolute max-sm:top-0 max-sm:right-0 max-sm:bottom-0 z-10 max-sm:bg-primary-700"
+				class="basis-2/5 max-sm:flex max-sm:items-end max-sm:absolute max-sm:top-0 max-sm:right-0 max-sm:bottom-0 z-10 max-sm:bg-primary-700"
 				transition:slide={{ delay: 250, duration: 300, easing: quintOut, axis: 'x' }}
 				bind:this={navigation}
 			>
