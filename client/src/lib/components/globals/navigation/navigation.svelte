@@ -1,8 +1,10 @@
 <script>
 	import { page } from '$app/stores';
-	import { fade, slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import logo from '$lib/images/logo/secondary_logo.svg';
+	import MobileNav from '$lib/components/globals/navigation/mobileNav.svelte';
+	import DesktopNav from '$lib/components/globals/navigation/desktopNav.svelte';
 
 	$: activeUrl = $page.url.pathname;
 
@@ -78,31 +80,9 @@
 			<input class="hidden" id="hamburgerMenu" type="checkbox" bind:checked={isOpen} />
 			<!--			Componentize this eventually-->
 		</div>
-		{#if isOpen || width >= '768'}
-			<div
-				id="navigation"
-				class="basis-2/5 max-sm:flex max-sm:items-end max-sm:absolute max-sm:top-0 max-sm:right-0 max-sm:bottom-0 z-10 max-sm:bg-primary-700"
-				transition:slide={{ delay: 250, duration: 300, easing: quintOut, axis: 'x' }}
-				bind:this={navigation}
-			>
-				<ul
-					class="flex max-sm:flex-col max-sm:items-center max-sm:justify-around max-sm:h-5/6 max-sm:w-full md:flex-row md:flex-nowrap md:justify-around md:content-center md:align-center"
-				>
-					{#each navItems as { title, href }}
-						<li
-							class={activeUrl === href
-								? 'group active-tab flex-auto text-center max-sm:text-lg max-sm:w-full only-md:text-xl lg:text-2xl'
-								: 'group flex-auto text-center max-sm:text-lg only-md:text-xl lg:text-2xl max-sm:w-full'}
-						>
-							<a
-								class="hover:bg-secondary-200 md:py-4 max-sm:px-20 max-sm:py-3 block max-sm:text-white md:text-secondary-600 group-[.active-tab]:bg-primary-200"
-								on:click={() => (isOpen = !isOpen)}
-								{href}>{title}</a
-							>
-						</li>
-					{/each}
-				</ul>
-			</div>
+		{#if isOpen}
+			<MobileNav {navItems} {navigation} {activeUrl} {isOpen} />
 		{/if}
+		<DesktopNav {navItems} {navigation} {activeUrl} {isOpen} />
 	</nav>
 </header>
