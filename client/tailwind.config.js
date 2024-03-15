@@ -56,6 +56,10 @@ export default {
 				// => @media (max-width: 1535px) { ... }
 				'max-2xl': { min: '1536px' }
 			},
+			dropShadow: {
+				light: '0 0 .75rem rgba(255, 255, 255, .7)',
+				dark: '0 0 .75rem rgba(0, 0, 0, .7)'
+			},
 			textShadowWhite: {
 				sm: '0 1px 2px #eee',
 				DEFAULT: '1px 2px #eee',
@@ -87,30 +91,6 @@ export default {
 					900: '#daf2ff'
 				},
 				tertiary: {
-					DEFAULT: '#e5d1d0',
-					100: '#39201f',
-					200: '#71413e',
-					300: '#a76360',
-					400: '#c79b98',
-					500: '#e5d1d0',
-					600: '#ebdbda',
-					700: '#f0e4e3',
-					800: '#f5eded',
-					900: '#faf6f6'
-				},
-				yellow_green: {
-					DEFAULT: '#99c133',
-					100: '#1f270a',
-					200: '#3d4d15',
-					300: '#5c741f',
-					400: '#7b9b29',
-					500: '#99c133',
-					600: '#b0d257',
-					700: '#c3de81',
-					800: '#d7e9ab',
-					900: '#ebf4d5'
-				},
-				myrtle_green: {
 					DEFAULT: '#3d7068',
 					100: '#0c1615',
 					200: '#192d2a',
