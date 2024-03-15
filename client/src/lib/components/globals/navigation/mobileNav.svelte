@@ -1,14 +1,16 @@
 <script>
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
+	import { createEventDispatcher } from 'svelte';
 
 	// imports
-	export let navItems, activeUrl;
+	export let navItems, activeUrl, isOpen;
 
-	let navigation, isOpen;
+	const dispatch = createEventDispatcher();
+	$: dispatch('openHasChanged', isOpen);
+	let navigation;
 
 	const onWindowClick = (e) => {
-		console.log(navigation);
 		if (navigation && navigation.contains(e.target) === false) {
 			isOpen = false;
 		}

@@ -46,7 +46,14 @@
 			<!--			Componentize this eventually-->
 		</div>
 		{#if isOpen}
-			<MobileNav {navItems} {activeUrl} />
+			<MobileNav
+				{navItems}
+				{activeUrl}
+				{isOpen}
+				on:openHasChanged={(event) => {
+					isOpen = event.detail;
+				}}
+			/>
 		{/if}
 		<DesktopNav {navItems} {activeUrl} />
 	</nav>
