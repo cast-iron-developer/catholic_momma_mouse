@@ -21,8 +21,10 @@
 
 <svelte:window on:click={onWindowClick} />
 
-<header class="bg-primary">
-	<nav class="max-sm:py-2 max-sm:mx-12 md:mx-16 flex justify-between items-center">
+<header class="bg-primary xl:flex">
+	<nav
+		class="max-sm:py-2 max-sm:mx-12 md:mx-16 xl:container xl:mx-auto flex justify-between items-center"
+	>
 		<div class="block">
 			<a href="/">
 				<img
