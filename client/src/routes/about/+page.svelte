@@ -1,25 +1,30 @@
 <script>
 	import img from '$lib/images/cmm_wdw_castle.jpg';
-
-	let width = 0;
 </script>
 
-<svelte:window bind:innerWidth={width} />
-
-<article class="bg-white py-40">
-	<section class="container mx-auto grid grid-cols-2 gap-10 items-center">
-		<div class="col-start-1">
+<article class="bg-white pt-20 pb-40">
+	<section
+		class="container grid mx-auto row-auto to-sm:gap-y-10 md:gap-10 items-center px-20 to-sm:grid-cols-1 only-md:grid-cols-2 only-lg:grid-cols-3 xl:grid-cols-4"
+	>
+		<div class="row-start-1 to-sm:col-span-2 only-md:col-span-2 only-lg:col-span-3 xl:col-span-4">
+			<h1 class="text-4xl lines my-8">About</h1>
+		</div>
+		<div class="row-start-2 to-sm:col-span-1 only-lg:col-span-1 xl:col-span-2">
 			<figure class="group relative">
-				<img class="rounded shadow-2xl w-1/2" src={img} alt="Catholic Momma Mouse" />
+				<img
+					class="shadow-2xl block size-full to-sm:rounded-t md:rounded md:group-hover:rounded-b-none"
+					src={img}
+					alt="Catholic Momma Mouse"
+				/>
 				<figcaption
-					class="hidden group-hover:block bg-primary text-white rounded p-4 absolute w-full"
+					class="bg-primary text-white p-4 w-full rounded-b md:absolute md:opacity-0 md:group-hover:transition-all md:group-hover:block md:group-hover:opacity-100 md:group-hover:rounded-t-none"
 				>
-					hey there
+					Catholic Momma Mouse at Disney World for the 50<sup>th</sup> Anniversary Celebration
 				</figcaption>
 			</figure>
 		</div>
-		<div class="col-start-2">
-			<h1 class="text-4xl text-primary-500 lines mb-6">About Catholic Momma Mouse</h1>
+		<div class="to-sm:row-start-3 md:row-start-2 to-sm:col-span-1 lg:col-span-2">
+			<h2 class="text-2xl text-primary-500 mb-6">Catholic Momma Mouse</h2>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deserunt dolorem eum, modi
 				nam neque officiis optio porro, quaerat quod soluta tenetur unde ut veniam veritatis vero

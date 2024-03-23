@@ -40,6 +40,21 @@ export default {
 
 				'only-2xl': { min: '1536px' },
 
+				// additional media queries because I like flexibility
+				'to-sm': { max: '767px' },
+				// => @media (max-width: 767px) { ... }
+
+				'to-md': { max: '1023px' },
+				// => @media (max-width: 1023px) { ... }
+
+				'to-lg': { max: '1279px' },
+				// => @media (max-width: 1279px) { ... }
+
+				'to-xl': { max: '1535px' },
+				// => @media (max-width: 1535px) { ... }
+
+				'to-2xl': { min: '1536px' },
+
 				// Starting the inverse of the standard tailwind media queries bc i hate them.
 				'max-xs': { max: '639px' },
 
