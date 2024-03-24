@@ -2,7 +2,7 @@
 	import img from '$lib/images/cmm_wdw_castle.jpg';
 </script>
 
-<article class="bg-white pt-20 pb-40">
+<div class="bg-white pt-20 pb-40">
 	<section
 		class="container grid mx-auto row-auto to-sm:gap-y-10 md:gap-10 items-center px-20 to-sm:grid-cols-1 only-md:grid-cols-2 only-lg:grid-cols-3 xl:grid-cols-4"
 	>
@@ -32,22 +32,4 @@
 			</p>
 		</div>
 	</section>
-</article>
-
-<style>
-	.lines {
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		grid-gap: 1rem;
-		align-items: center;
-	}
-
-	.lines:before,
-	.lines:after {
-		content: '';
-		display: block;
-		width: 100%;
-		height: clamp(1px, 0.1ch, 2px);
-		background-color: theme('colors.primary.500');
-	}
-</style>
+</div>
