@@ -2,9 +2,9 @@ import { fail } from '@sveltejs/kit';
 
 /** @type {import('./$types').Actions} */
 export const actions = {
+	// user EMAILJS for sending EMAILS
 	contact: async ({ request }) => {
 		const data = await request.formData();
-		let err = false;
 
 		if (!data) {
 			return fail(400, { noForm: true });
@@ -14,20 +14,42 @@ export const actions = {
 		const email = data.get('email');
 		const subject = data.get('emailSubjectLine');
 		const message = data.get('emailMessage');
+		let nameErrorObject, emailErrorObject, subjectErrorObject, mailErrorObject;
+		let errArray = [];
 
 		if (!name) {
-			return fail(400, { name, missingName: true });
+			nameErrorObject = {
+				nameError: 'You need to add a name!'
+			};
+			errArray.push(nameErrorObject);
 		}
 		if (!email) {
-			return fail(400, { email, missingEmail: true });
+			emailErrorObject = {
+				emailError: 'You need to add an email!'
+			};
+			errArray.push(emailErrorObject);
 		}
 		if (!subject) {
-			return fail(400, { subject, missingSubject: true });
+			subjectErrorObject = {
+				subjectError: 'You need to add a subject!'
+			};
+			errArray.push(subjectErrorObject);
 		}
 		if (!message) {
-			return fail(400, { message, missingMessage: true });
+			mailErrorObject = {
+				messageError: 'You need to add a message!'
+			};
+			errArray.push(mailErrorObject);
 		}
 
-		console.log(data);
+		if (errArray.length > 0) {
+			return fail(400, {
+				...(nameErrorObject ? nameErrorObject : {}),
+				...(emailErrorObject ? emailErrorObject : {}),
+				...(subjectErrorObject ? subjectErrorObject : {}),
+				...(mailErrorObject ? mailErrorObject : {}),
+				contactErrors: true
+			});
+		}
 	}
 };

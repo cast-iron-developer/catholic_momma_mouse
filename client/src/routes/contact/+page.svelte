@@ -19,6 +19,13 @@
 			{#if form?.noForm}
 				<p class="text-red-800 font-bold">There was an error with your form! Please try again!</p>
 			{/if}
+
+			{#if form?.contactErrors}
+				<p class="text-red-800 font-bold">
+					Ω Please correct the issues with your form before trying again!!
+				</p>
+			{/if}
+
 			<div class="flex flex-wrap">
 				<div class="name-section flex flex-col flex-1 lg:mr-5">
 					<label class="mb-2 text-xl to-md:mt-2" for="name">Name:</label>
@@ -29,8 +36,8 @@
 						name="name"
 						value={form?.name ?? ''}
 					/>
-					{#if form?.missingName}
-						<p class="text-red-800 font-bold">Name Required!</p>
+					{#if form?.nameError}
+						<p class="text-red-800 font-bold">{form.nameError}</p>
 					{/if}
 				</div>
 				<div class="email-section flex flex-col flex-1 lg:ml-5">
@@ -42,8 +49,8 @@
 						name="email"
 						value={form?.email ?? ''}
 					/>
-					{#if form?.missingEmail}
-						<p class="text-red-800 font-bold">Email Required!</p>
+					{#if form?.emailError}
+						<p class="text-red-800 font-bold">{form.emailError}</p>
 					{/if}
 				</div>
 			</div>
@@ -56,8 +63,8 @@
 					name="emailSubjectLine"
 					value={form?.emailSubjectLine ?? ''}
 				/>
-				{#if form?.missingSubject}
-					<p class="text-red-800 font-bold">Subject Required!</p>
+				{#if form?.subjectError}
+					<p class="text-red-800 font-bold">{form.subjectError}</p>
 				{/if}
 			</div>
 			<div class="name-section flex flex-col">
@@ -70,8 +77,8 @@
 					value={form?.emailMessage ?? ''}
 					placeholder="Add email message here..."
 				/>
-				{#if form?.missingMessage}
-					<p class="text-red-800 font-bold">Message Required!</p>
+				{#if form?.messageError}
+					<p class="text-red-800 font-bold">{form.messageError}</p>
 				{/if}
 			</div>
 			<button
