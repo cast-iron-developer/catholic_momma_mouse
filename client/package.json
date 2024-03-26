@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@emailjs/browser": "^4.3.3",
 		"@popperjs/core": "^2.11.8",
 		"@sanity/client": "^6.14.2",
 		"flowbite": "^2.3.0",
