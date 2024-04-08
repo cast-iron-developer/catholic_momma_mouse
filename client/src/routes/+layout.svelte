@@ -12,7 +12,7 @@
 		name="description"
 		content="This is the culmination of many years worth of dreaming and a little bit of hard work. Please enjoy a Catholic Disney Blog made by a mother who loves both her Catholic Faith and Disney World."
 	/>
-</svelte:head>
+</svelte:head>d
 
 <div class="font-montserrat">
 	<Navigation navItems={data.navigationItems}></Navigation>

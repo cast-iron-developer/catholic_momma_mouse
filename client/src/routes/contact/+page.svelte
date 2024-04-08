@@ -1,7 +1,53 @@
 <script>
 	import { enhance } from '$app/forms';
+	import emailjs from '@emailjs/browser';
 
 	export let form;
+	let disabledButton = true;
+	let formData = new FormData();
+
+	$: formData, disabled();
+
+	function disabled() {
+		disabledButton = !(
+			formData.name !== '' &&
+			formData.email !== '' &&
+			formData.subject !== '' &&
+			formData.message !== ''
+		);
+	}
+
+	let isSubmitted = false;
+	let isLoading = false;
+
+	const sendEmail = async (e) => {
+		isLoading = true;
+		try {
+			const response = await emailjs.send(
+				'',
+				'',
+				{
+					from_name: formData.name,
+					from_email: formData.email,
+					message: formData.message,
+					subject: formData.subject
+				},
+				''
+			);
+
+			console.log('SUCCESS!', response);
+			isSubmitted = true;
+		} catch (error) {
+			console.error(error);
+		} finally {
+			isLoading = false;
+			e.target.reset();
+
+			console.log(formData);
+			formData = new FormData();
+			console.log(formData);
+		}
+	};
 </script>
 
 <div class="bg-white py-40">
@@ -15,10 +61,24 @@
 			method="POST"
 			action="?/contact"
 			use:enhance
+			on:submit|preventDefault={sendEmail}
 		>
+			{#if isLoading}
+				<p>loading</p>
+			{/if}
+			{#if isSubmitted}
+				<p>Submitted</p>
+			{/if}
 			{#if form?.noForm}
 				<p class="text-red-800 font-bold">There was an error with your form! Please try again!</p>
 			{/if}
+
+			{#if form?.contactErrors}
+				<p class="text-red-800 font-bold">
+					Please correct the issues with your form before trying again!!
+				</p>
+			{/if}
+
 			<div class="flex flex-wrap">
 				<div class="name-section flex flex-col flex-1 lg:mr-5">
 					<label class="mb-2 text-xl to-md:mt-2" for="name">Name:</label>
@@ -27,10 +87,11 @@
 						id="name"
 						type="text"
 						name="name"
-						value={form?.name ?? ''}
+						required
+						bind:value={formData.name}
 					/>
-					{#if form?.missingName}
-						<p class="text-red-800 font-bold">Name Required!</p>
+					{#if form?.nameError}
+						<p class="text-red-800 font-bold">{form.nameError}</p>
 					{/if}
 				</div>
 				<div class="email-section flex flex-col flex-1 lg:ml-5">
@@ -40,42 +101,46 @@
 						id="email"
 						type="email"
 						name="email"
-						value={form?.email ?? ''}
+						required
+						bind:value={formData.email}
 					/>
-					{#if form?.missingEmail}
-						<p class="text-red-800 font-bold">Email Required!</p>
+					{#if form?.emailError}
+						<p class="text-red-800 font-bold">{form.emailError}</p>
 					{/if}
 				</div>
 			</div>
 			<div class="name-section flex flex-col">
-				<label class="my-2 text-xl to-md:mt-2" for="emailSubjectLine">Email Subject:</label>
+				<label class="my-2 text-xl to-md:mt-2" for="subject">Email Subject:</label>
 				<input
 					class="border border-secondary-300 bg-white rounded"
-					id="emailSubjectLine"
+					id="subject"
 					type="text"
-					name="emailSubjectLine"
-					value={form?.emailSubjectLine ?? ''}
+					name="subject"
+					required
+					bind:value={formData.subject}
 				/>
-				{#if form?.missingSubject}
-					<p class="text-red-800 font-bold">Subject Required!</p>
+				{#if form?.subjectError}
+					<p class="text-red-800 font-bold">{form.subjectError}</p>
 				{/if}
 			</div>
 			<div class="name-section flex flex-col">
-				<label class="my-2 text-xl to-md:mt-2" for="emailMessage">Email Message:</label>
+				<label class="my-2 text-xl to-md:mt-2" for="message">Email Message:</label>
 				<textarea
-					id="emailMessage"
+					id="message"
 					class="border border-secondary-300 bg-white rounded"
-					name="emailMessage"
+					name="message"
 					rows="4"
-					value={form?.emailMessage ?? ''}
+					required
+					bind:value={formData.message}
 					placeholder="Add email message here..."
 				/>
-				{#if form?.missingMessage}
-					<p class="text-red-800 font-bold">Message Required!</p>
+				{#if form?.messageError}
+					<p class="text-red-800 font-bold">{form.messageError}</p>
 				{/if}
 			</div>
 			<button
-				class="to-sm:w-full mt-4 float-right bg-transparent text-bg-primary py-2 px-4 rounded border border-primary border-2 hover:bg-primary hover:text-white text-xl"
+				class="to-sm:w-full mt-4 float-right bg-transparent text-primary py-2 px-4 rounded border border-primary border-2 hover:bg-primary hover:text-white text-xl disabled:hover:bg-gray-400 disabled:bg-gray-400 disabled:hover:text-primary"
+				disabled={disabledButton}
 				type="submit"
 			>
 				Submit

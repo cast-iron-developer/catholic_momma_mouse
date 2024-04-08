@@ -4,8 +4,6 @@
 	import cmm from '$lib/images/siteImages/catholic-momma-mouse.webp';
 	let width = 0;
 
-	export let data;
-
 	const getBackgroundImage = (width) => {
 		if (width >= 2000) {
 			return lg_bg_image;

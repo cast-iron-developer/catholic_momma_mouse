@@ -3,7 +3,6 @@ import { createClient } from '@sanity/client';
 
 export const projectId = env.PROJECT_ID;
 export const dataSet = env.DATASET;
-
 const client = createClient({
 	projectId: projectId,
 	dataset: dataSet,
