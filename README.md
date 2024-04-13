@@ -1,17 +1,38 @@
-# Catholic Momma Mouse
+# Maggie's Faith Meets Fantasy
 
-## Watching Disney Movies through the lens of Catholicism
+## Built Using
 
-Client
+- Sass
+- TailwindCSS
+- Sveltekit
+- [Flowbite](https://flowbite.com/docs/getting-started/svelte/)
+    - Further Flowbite Documentation on: [github](https://github.com/themesberg/flowbite-svelte)
+- Image Compression done with: [Squoosh](https://squoosh.app)
 
-- Built with [Svelte Kit](https://kit.svelte.dev/)
+## Running the Application:
 
-Server
+- Development:
 
-- Build with [Sanity.io](https://www.sanity.io/)
+  ```bash
+    npm install || pnpm install || yarn install
+    npm run dev
 
-## Notes for next time:
+    # or start the server and open the app in a new browser tab
+    npm run dev -- --open
+  ```
 
--- need to work on animating the navigation
--- [add functionality so that if 'click' is outside of opened mobile nav, the nav will close.](https://stackoverflow.com/questions/72896690/close-other-dropdown-on-click-in-svelte)
--- keep on keeping on
+- Building:
+  ```bash
+    # To create a production version of your app
+    npm run build
+  ```
+- Preview:
+  ```bash
+    # To preview the production build of the site
+    npm run preview
+  ```
+
+## Deployment Environment
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target
+> environment.
