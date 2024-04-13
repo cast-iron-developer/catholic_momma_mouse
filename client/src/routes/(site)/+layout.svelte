@@ -1,7 +1,7 @@
 <script>
-	import '../app.scss';
-	import Footer from '../lib/components/globals/footer/footer.svelte';
+	import Footer from '$lib/components/globals/footer/footer.svelte';
 	import Navigation from '$lib/components/globals/navigation/navigation.svelte';
+	import '../../app.scss';
 
 	export let data;
 </script>
@@ -12,7 +12,7 @@
 		name="description"
 		content="This is the culmination of many years worth of dreaming and a little bit of hard work. Please enjoy a Catholic Disney Blog made by a mother who loves both her Catholic Faith and Disney World."
 	/>
-</svelte:head>d
+</svelte:head>
 
 <div class="font-montserrat">
 	<Navigation navItems={data.navigationItems}></Navigation>

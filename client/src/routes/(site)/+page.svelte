@@ -11,10 +11,17 @@
 
 		return bg_image;
 	};
+
+	export let data;
 </script>
 
 <svelte:window bind:innerWidth={width} />
 
+<ul>
+	{#each data.posts as blog_post}
+		<li>{blog_post.title}</li>
+	{/each}
+</ul>
 <article
 	class="article bg-cover bg-center bg-no-repeat bg-blend-overlay"
 	style="background-image: url({getBackgroundImage(width)})"
