@@ -24,6 +24,10 @@ export default {
 			montserrat: ['Montserrat', 'sans-serif']
 		},
 		extend: {
+			gridTemplateColumns: {
+				standard: '1fr 8fr 1fr',
+				'standard-mobile': '15px 8fr 15px'
+			},
 			screens: {
 				// additional media queries because I like flexibility
 				'only-sm': { min: '640px', max: '767px' },
@@ -117,10 +121,10 @@ export default {
 					800: '#a8cfc9',
 					900: '#d4e7e4'
 				},
-				white: {
+				w: {
 					DEFAULT: '#eee'
 				},
-				black: {
+				b: {
 					DEFAULT: '#333'
 				}
 			},

@@ -10,6 +10,6 @@
 	/>
 </svelte:head>
 
-<main class="font-montserrat">
+<main class="font-montserrat h-lvh bg-secondary-100">
 	<slot />
 </main>
