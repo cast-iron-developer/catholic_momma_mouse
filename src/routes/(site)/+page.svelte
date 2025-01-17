@@ -1,6 +1,6 @@
 <script>
-	import bg_image from '$lib/images/background-images/wdw-castle-fireworks.webp';
 	import lg_bg_image from '$lib/images/background-images/wdw-castle-fireworks-lg.webp';
+	import bg_image from '$lib/images/background-images/wdw-castle-fireworks.webp';
 	import cmm from '$lib/images/siteImages/catholic-momma-mouse.webp';
 	let width = 0;
 
@@ -13,15 +13,11 @@
 	};
 
 	export let data;
+	console.log(data);
 </script>
 
 <svelte:window bind:innerWidth={width} />
 
-<ul>
-	{#each data.posts as blog_post}
-		<li>{blog_post.title}</li>
-	{/each}
-</ul>
 <article
 	class="article bg-cover bg-center bg-no-repeat bg-blend-overlay"
 	style="background-image: url({getBackgroundImage(width)})"

@@ -17,7 +17,7 @@
 					alt="Catholic Momma Mouse"
 				/>
 				<figcaption
-					class="bg-primary text-white p-4 w-full rounded-b md:absolute md:opacity-0 md:group-hover:transition-all md:group-hover:block md:group-hover:opacity-100 md:group-hover:rounded-t-none"
+					class="bg-primary text-w p-4 w-full rounded-b md:absolute md:opacity-0 md:group-hover:transition-all md:group-hover:block md:group-hover:opacity-100 md:group-hover:rounded-t-none"
 				>
 					Catholic Momma Mouse at Disney World for the 50<sup>th</sup> Anniversary Celebration
 				</figcaption>

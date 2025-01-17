@@ -1,7 +1,7 @@
 <script>
-	import { slide } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
 	import { createEventDispatcher } from 'svelte';
+	import { quintOut } from 'svelte/easing';
+	import { slide } from 'svelte/transition';
 
 	// imports
 	export let navItems, activeUrl, isOpen;
@@ -32,7 +32,7 @@
 					: 'group flex-auto text-center text-lg w-full'}
 			>
 				<a
-					class="hover:bg-secondary-200 px-20 py-3 block text-white group-[.active-tab]:bg-primary-200"
+					class="hover:bg-secondary-200 px-20 py-3 block text-w group-[.active-tab]:bg-primary-200"
 					on:click={() => (isOpen = !isOpen)}
 					{href}>{title}</a
 				>
