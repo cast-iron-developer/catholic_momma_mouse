@@ -1,10 +1,16 @@
-<footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
-	<nav class="grid grid-flow-col gap-4">
-		<a class="link link-hover">About</a>
-		<a class="link link-hover">Reviews</a>
-		<a class="link link-hover">Contact</a>
+<script lang="ts">
+	import NavigationList from '$lib/components/globals/navigation/navigation-list.svelte'
+	import { navigationList } from '$lib/components/utils/navigation'
+	import type { NavigationListType } from '$lib/components/types/global-types';
+
+	const navigation: NavigationListType = $state(navigationList)
+</script>
+
+<footer class="footer footer-center bg-quarternary-100 text-base-content p-10">
+	<nav class="grid grid-flow-col gap-4 text-white">
+		<NavigationList listStyles={"flex"} listItemStyles={"block px-1"} listData={navigation}  />
 	</nav>
 	<aside>
-		<p>Copyright © {new Date().getFullYear()} - All right reserved by Catholic Momma Mouse</p>
+		<p class="text-white">Copyright © {new Date().getFullYear()} - All right reserved by Catholic Momma Mouse</p>
 	</aside>
 </footer>

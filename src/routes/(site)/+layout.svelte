@@ -2,7 +2,7 @@
 
 	import Navigation from '$lib/components/globals/navigation/navigation.svelte'
 	import Footer from '$lib/components/globals/navigation/footer.svelte'
-	import '../app.css';
+	import '../../app.css';
 	let { children } = $props();
 </script>
 

@@ -4,16 +4,16 @@
 	import { navigationList } from '$lib/components/utils/navigation'
 	import type { NavigationListType } from '$lib/components/types/global-types';
 
-	import logo from '$lib/images/logo/secondary_logo.svg';
+	import logo from '$lib/images/logo/faith_meets_fantasy.svg';
 
 	const navigation: NavigationListType = $state(navigationList)
 </script>
 
-<div class="sticky top-0 z-50  bg-primary">
-	<div class="navbar mx-auto only-lg:max-w-5xl only-xl:max-w-6xl to-2xl:max-w-7xl">
+<div class="sticky top-0 z-50 bg-quarternary-100">
+	<div class="navbar mx-auto p-0 only-lg:max-w-5xl only-xl:max-w-6xl to-2xl:max-w-7xl">
 		<div class="navbar-start">
 			<div class="dropdown mr-2">
-				<div tabindex="0" role="button" class="btn bg-primary-600 hover:bg-primary-700 lg:hidden">
+				<div tabindex="0" role="button" class="btn bg-quarternary-600 hover:bg-quarternary-700 lg:hidden">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-5 w-5"
@@ -28,17 +28,17 @@
 				</div>
 				<NavigationList listStyles={"menu menu-sm dropdown-content bg-primary-600 rounded-box z-[1] mt-3 w-52 p-2 shadow text-white"} listData={navigation}  />
 			</div>
-			<a href="/" class="inline-flex items-center logo bg-primary hover:bg-none text-xl text-white p-1.5">
+			<a href="/" class="inline-flex items-center logo bg-quarternary-100 hover:bg-none text-xl text-white p-1.5">
 				<img
 					id="headerLogo"
-					class="block h-14 only-md:h-12 max-sm:h-10"
+					class="block h-16 only-md:h-12 max-sm:h-10"
 					src={logo}
 					alt="Disney Momma Mouse"
 				/>
 			</a>
 		</div>
 		<div class="navbar-end hidden lg:flex">
-			<NavigationList listStyles={"menu menu-horizontal px-1 text-white"} listData={navigation}  />
+			<NavigationList listStyles={"menu menu-horizontal px-1 text-white"}  listItemStyles={"hover:bg-quarternary-700 hover:rounded-lg hover:text-quarternary-100"} listAnchorStyles={"active:!bg-quarternary-700 active:!rounded-lg active:!text-quarternary-100"} listData={navigation}  />
 		</div>
 	</div>
 </div>

@@ -1,16 +1,12 @@
 <script lang="ts">
 
-	import type { NavigationItemType } from '$lib/components/types/global-types';
-
-	type NavigationListProps = {
-		styles?: string,
-		item: NavigationItemType
-	}
+	import type { NavigationItemProps } from '$lib/components/types/global-types';
 
 	let {
-		styles,
+		anchorStyles,
+		listStyles,
 		item
-	}: NavigationListProps = $props();
+	}: NavigationItemProps = $props();
 </script>
 
-<li><a class={styles ?? ''} href={item.href}>{item.title}</a></li>
+<li class={listStyles ?? ''}><a class={anchorStyles ?? ''} href={item.href}>{item.title}</a></li>
