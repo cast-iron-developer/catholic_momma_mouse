@@ -10,7 +10,7 @@
 </script>
 
 <div class="sticky top-0 z-50 bg-quarternary-100">
-	<div class="navbar mx-auto p-0 only-lg:max-w-5xl only-xl:max-w-6xl to-2xl:max-w-7xl">
+	<div class="navbar container mx-auto p-0 only-lg:max-w-5xl only-xl:max-w-6xl to-2xl:max-w-7xl">
 		<div class="navbar-start">
 			<div class="dropdown mr-2">
 				<div tabindex="0" role="button" class="btn bg-quarternary-600 hover:bg-quarternary-700 lg:hidden">

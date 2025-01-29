@@ -1,0 +1,2 @@
+INSERT INTO "review_revision" (id, review_id, user_id, item, content, slug, deleted, active, created_at, modified_at) VALUES
+    ('ccccccc3-cccc-cccc-cccc-cccccccccccc', 'aaaaaaa1-aaaa-aaaa-aaaa-aaaaaaaaaaaa', '22222222-2222-2222-2222-222222222222', 'Item A', '{"text": "Updated review."}', 'review-item-a-v2', false, true, NOW(), NOW());

@@ -12,10 +12,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write .",
     "lint": "prettier --check . && eslint .",
-    "db:push": "drizzle-kit push",
-    "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio",
-    "db:start": "docker compose up"
+    "update-types": "npx supabase gen types typescript --local > src/lib/server/db/database.types.ts"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.5",
@@ -28,7 +25,6 @@
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.23",
-    "drizzle-kit": "^0.30.2",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-svelte": "^2.46.1",
@@ -45,8 +41,9 @@
     "vite": "^5.4.11"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.48.1",
     "@types/node": "^22.10.7",
-    "drizzle-orm": "^0.38.4",
+    "dotenv": "^16.4.7",
     "postgres": "^3.4.5"
   }
 }
